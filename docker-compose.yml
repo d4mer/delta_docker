@@ -18,15 +18,6 @@ services:
       - internal
       - traefik-public
 
-    volumes:
-      letsencrypt:
-
-    networks:
-      traefik-public:
-        external: true
-      internal:
-        external: false
-
   portainer:
     image: portainer/portainer
     command: -H unix:///var/run/docker.sock
