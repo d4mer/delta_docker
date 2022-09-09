@@ -65,3 +65,12 @@ services:
     networks:
       - internal
       - traefik-public
+volumes:
+  letsencrypt:
+  portainer_data:
+
+networks:
+  traefik-public:
+    external: true
+  internal:
+    external: false
